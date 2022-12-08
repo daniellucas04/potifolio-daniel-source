@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { SiGithub } from 'react-icons/si'
 import RepositoryCard from "../layout/RepositoryCard";
+import Loading from "../layout/Loading";
 
 export default function Projects(){
   
   const [repositories, setRepositories] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
+
 
   useEffect(() => {
     fetch('https://api.github.com/users/daniellucas04/repos', {
@@ -16,6 +19,7 @@ export default function Projects(){
     .then((response) => response.json())
     .then((data) =>{
       setRepositories(data);
+      setRemoveLoading(true);
     })
     .then((err) => console.log(err));
   }, [])
@@ -32,9 +36,10 @@ export default function Projects(){
           </a>
         </p>
       </div>
+      {!removeLoading && <Loading />}
       <div className='text-white/90 mx-auto grid grid-cols-3 m-20'>
         {repositories.length > 0 && repositories.map((repository) => (
-          <RepositoryCard 
+          <RepositoryCard
             key={repository.id}
             name={repository.name}
             description={repository.description}
