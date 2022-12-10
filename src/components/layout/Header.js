@@ -6,7 +6,7 @@ export default function Header(){
       <nav className="text-white">
         <ul className="flex gap-5 uppercase">
           <li className="header-item"><Link to="/projects">Works</Link></li>
-          <li className="header-item"><Link to="/">Home</Link></li>
+          <li className="header-item"><Link to="/daniel-portifolio">Home</Link></li>
           <li className="header-item"><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
