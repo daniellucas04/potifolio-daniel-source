@@ -1,6 +1,6 @@
 export default function RepositoryCard({ name, description, language, branch, cloneURL }){
   return(
-    <div className="m-5 hover:translate-y-1 transition flex flex-col bg-primary-card rounded-lg shadow-md hover:bg-primary-card/50 break-words cursor-default">
+    <div className="m-5 hover:translate-y-1 transition flex flex-col bg-primary-card rounded-lg shadow-md hover:bg-primary-card/50 break-words cursor-default max-sm:text-sm max-sm:w-[21rem]">
       <div className="flex flex-col justify-between p-4 leading-normal">
         <div className="flex align-center justify-center">
           <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h1>

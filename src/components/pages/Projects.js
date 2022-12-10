@@ -27,8 +27,8 @@ export default function Projects(){
   return (
     <div className="text-white-read/90">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="uppercase text-5xl mt-10 tracking-wider">repositories</h1>
-        <p className="mt-1 text-sm flex items-center">
+        <h1 className="uppercase text-5xl mt-10 tracking-wider max-sm:text-3xl">repositories</h1>
+        <p className="mt-1 text-sm flex items-center max-sm:text-xs">
           All of my projects are stored on 
           <a href="https://www.github.com/daniellucas04" target="_blank" rel="noreferrer" className="w-fit bg-white/90 text-primary-black p-1 font-bold flex gap-2 items-center ml-1">
             GitHub
@@ -37,7 +37,7 @@ export default function Projects(){
         </p>
       </div>
       {!removeLoading && <Loading />}
-      <div className='text-white/90 mx-auto grid grid-cols-3 m-20'>
+      <div className='text-white/90 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 m-20 max-sm:mt-5 max-sm:flex max-sm:flex-col max-sm:items-center'>
         {repositories.length > 0 && repositories.map((repository) => (
           <RepositoryCard
             key={repository.id}
