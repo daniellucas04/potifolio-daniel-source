@@ -25,7 +25,7 @@ export default function Projects(){
   }, [])
   
   return (
-    <div className="text-white/90">
+    <div className="text-white-read/90">
       <div className="flex flex-col items-center justify-center">
         <h1 className="uppercase text-5xl mt-10 tracking-wider">repositories</h1>
         <p className="mt-1 text-sm flex items-center">

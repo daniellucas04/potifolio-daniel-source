@@ -18,7 +18,7 @@ export default function Footer(){
               <a className="hover:text-neutral-600" href="https://www.linkedin.com/in/daniel-lucas-328907258/" target="_blank" rel="noreferrer"><SiLinkedin size={20} /></a>
             </div>
           </div>
-          <div className="bg-white h-[12em] w-px mt-5" />
+          <div className="bg-white h-[13em] w-px mt-5" />
         </div>
           <div className="flex items-center flex-col justify-center gap-5 mx-auto">
             <div className="bg-primary-black/60 p-1 rounded-md">

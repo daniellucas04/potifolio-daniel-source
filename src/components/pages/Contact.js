@@ -1,7 +1,22 @@
+import { MdOutlineContacts } from 'react-icons/md'
+import ContactForm from '../layout/ContactForm';
+
 export default function Contact(){
   return(
-    <div>
-      <h1>Contact</h1>
+    <div className='text-white-read w-full h-screen'>
+      <div className="flex items-center flex-col">
+        <h1 className="uppercase text-5xl mt-10 tracking-wider">Contact</h1>
+          <p className="mt-1 text-sm flex items-center">
+            The fastest way to  
+            <span className="w-fit bg-white/90 text-primary-black p-1 font-bold flex gap-2 items-center ml-1">
+              contact me
+              <MdOutlineContacts size={25} />
+            </span>
+          </p>
+      </div>
+      <div className='flex justify-center mt-[2em] bg-primary-card p-[3em]'>
+        <ContactForm />
+      </div>
     </div>
-  )
+  );
 }
